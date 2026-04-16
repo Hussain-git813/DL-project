@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "Segoe UI", Tahoma, sans-serif;
+  --font-mono: "JetBrains Mono", "Roboto Mono", monospace;
+  
+  --color-bg: #F8FAFC;
+  --color-surface: #FFFFFF;
+  --color-primary: #0284C7;
+  --color-primary-dark: #075985;
+  --color-ink-bold: #0F172A;
+  --color-ink-base: #334155;
+  --color-ink-muted: #64748B;
+  --color-border: #E2E8F0;
+  --color-success: #10B981;
+  --color-danger: #EF4444;
+}
+
+@layer base {
+  body {
+    @apply bg-bg text-ink-base font-sans;
+  }
+}
+
+@layer components {
+  .section-title {
+    @apply text-[0.7rem] uppercase tracking-[0.1em] font-bold text-ink-muted mb-4 flex items-center gap-2;
+  }
+  
+  .section-title::after {
+    content: '';
+    @apply flex-1 h-[1px] bg-border;
+  }
+
+  .panel {
+    @apply bg-surface p-8 flex flex-col;
+  }
+
+  .btn {
+    @apply px-6 py-3 rounded-[6px] font-semibold text-[0.875rem] transition-all duration-200 text-center flex-1 border border-transparent cursor-pointer;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-white hover:bg-primary-dark;
+  }
+
+  .btn-outline {
+    @apply bg-transparent border-border text-ink-base hover:bg-bg;
+  }
+}

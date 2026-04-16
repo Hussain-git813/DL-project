@@ -1,0 +1,6 @@
+{
+  "name": "PneumoScan AI",
+  "description": "Advanced Chest X-Ray Pneumonia Detection using a local ResNet-inspired diagnostic engine.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}
